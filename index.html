@@ -18,6 +18,7 @@
           <h2>Bi-Weekly Update</h2>
           <h5>Nov 6, 2019</h5>
           <p>
+            1. Compile Tekkotsu behaviour program
             <br>
             After installing Tekkotsu's dependencies. I started to build a simple program following the instructions on http://www.tekkotsu.org/execution.html
             <br>
@@ -27,6 +28,16 @@
             I realized that the two Tekkotsu setup tutorials on the same website are for two different version of Tekkotsu although it was not explicitly mentioned.
             <br>
             I downgraded my Tekkotsu version to 4.0.1. And the program was successfully compiled.
+            <br>
+            2. Install Mirage (Mirage is a simulation environment which can host multiple agents in a virtual world.)
+            <br>
+            The OPEN-R SDK I installed comes with GCC 3.3.6. It only works with Tekkotsu 4.0.1 which doesn't include Mirage in its source code.
+            <br>
+            Fortunately, I found a package called AIBO+ that builds a new AI of AIBO from scratch. It comes with OPEN-R SDK with GCC 5.4. It could potentially work with Tekkotsu 5.1 which does include Mirage.
+            <br>
+            When I tried to install, it said "E: Unable to locate package". Then I tried to extract OPEN_R_SDK from the source code and compile Tekkotusu program,
+            but it was not successful
+            <br>
           </p>
         </div>
         <div class="card">
