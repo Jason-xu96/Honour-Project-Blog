@@ -35,8 +35,11 @@
             <br>
             Fortunately, I found a package called AIBO+ that builds a new AI of AIBO from scratch. It comes with OPEN-R SDK with GCC 5.4. It could potentially work with Tekkotsu 5.1 which does include Mirage.
             <br>
-            When I tried to install, it said "E: Unable to locate package". Then I tried to extract OPEN_R_SDK from the source code and compile Tekkotusu program,
-            but it was not successful
+            When I tried to install, it said "E: Unable to locate package" because the package has been removed for my Ubuntu version.
+            I tried to trace back to the previous package history in https://launchpad.net/~csaba-kertesz/+archive/ubuntu/aiboplus/+packages?field.name_filter=&field.status_filter=superseded&field.series_filter=trusty,
+            but the file has been deleted.
+            <br>
+            Then I tried to extract OPEN_R_SDK directly from the source code of AIBO+ and compile Tekkotusu program, but it was not successful saying 'missing the header file'
             <br>
           </p>
         </div>
@@ -49,9 +52,11 @@
             <br>
             I could install Ubuntu on a 16GB flash drive. That gives me enough room for now so that I should be able to continue with my framework setup.
             <br>
+            I partitioned my flash drive but it still doesn't have enough space.
+            <br>
             Dr. Jim emailed me back saying he would recommend use a virtual machine.
             <br>
-            I installed Ubuntu in VirtualBox.
+            I installed Ubuntu as a VM using VirtualBox.
             <br>
             2. Familiarized myself with Linux commands.
             <br>
