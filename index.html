@@ -9,242 +9,325 @@
 </head>
 <!--  This is a w3schools template: https://www.w3schools.com/howto/howto_css_blog_layout.asp -->
 <body>
-    <div class="header">
-        <h2>Zhikan's Undergraduate Honours Project Blog</h2>
-    </div>    
-    <div class="row">
-      <div>
-        <div class="card">
-          <h2>Bi-Weekly Update</h2>
-          <h5>Nov 6, 2019</h5>
-          <p>
-            1. Compile Tekkotsu behaviour program
-            <br>
-            After installing Tekkotsu's dependencies. I started to build a simple program following the instructions on http://www.tekkotsu.org/execution.html
-            <br>
-            I encoutered an error saying "cc1plus: error: unrecognized command line option '-std=c++11'",
-            and it turned out that the gcc installed from the tutorial http://www.tekkotsu.org/openr-install.html was too old for the latest version of Tekkotsu.
-            <br>
-            I realized that the two Tekkotsu setup tutorials on the same website are for two different version of Tekkotsu although it was not explicitly mentioned.
-            <br>
-            I downgraded my Tekkotsu version to 4.0.1. And the program was successfully compiled.
-            <br>
-          </p>
-          <p>
-            2. Install Mirage (Mirage is a simulation environment which can host multiple agents in a virtual world.)
-            <br>
-            The OPEN-R SDK I installed comes with GCC 3.3.6. It only works with Tekkotsu 4.0.1 which doesn't include Mirage in its source code.
-            <br>
-            Fortunately, I found a package called AIBO+ that builds a new AI of AIBO from scratch. It comes with OPEN-R SDK with GCC 5.4. It could potentially work with Tekkotsu 5.1 which does include Mirage.
-            <br>
-            When I tried to install, it said "E: Unable to locate package" because the package has been removed for my Ubuntu version.
-            I tried to trace back to the previous package history in https://launchpad.net/~csaba-kertesz/+archive/ubuntu/aiboplus/+packages?field.name_filter=&field.status_filter=superseded&field.series_filter=trusty,
-            but the file has been deleted.
-            <br>
-            Then I tried to extract OPEN_R_SDK directly from the source code of AIBO+ and compile Tekkotusu program, but it was not successful saying 'missing the header file'
-          </p>
-          <p>
-            3. Started to create a image disk of my Ubuntu system
-            <br>
-            Since I have successfully compiled a Tekkotsu behaviour program, Dr. Jim ask me to make a disk image of my Ubuntu system.
-          </p>
-        </div>
-        <div class="card">
-          <h2>Bi-Weekly Update</h2>
-          <h5>Oct 23, 2019</h5>
-          <p>
-            1. Continued look into what the best way is to install Ubuntu 14.04 LTS.
-            <br>
-            I could install Ubuntu on a 16GB flash drive. That gives me enough room for now so that I should be able to continue with my framework setup.
-            <br>
-            I partitioned my flash drive but it still doesn't have enough space.
-            <br>
-            Dr. Jim emailed me back saying he would recommend use a virtual machine.
-            <br>
-            I installed Ubuntu as a VM using VirtualBox.
-          </p>
-          <p>
-            2. Familiarized myself with Linux commands.
-            <br>
-            Learned how to edit text files with vim, how to run programs with the security privileges.
-          </p>
-          <p>
-            3. Start to set up Tekkotsu and its dependencies.
-            <br>
-            Downloaded and installed the latest version of Tekkotsu using CVS (Concurrent Versions System).
-            <br>
-            Installed Open-R SDK as a dependency of Tekkotsu. One of its dependency 'texinfo' was too new. I had to downgrade it.
-          </p>
-          <p>
-            4.Since I don't have a physical robot to run the Tekkotsu program on, I also try to set up Mirage which is a virtual environment for hosting agents and its dependency.
-            <br>
-            Some links to the dependencies of it are invalid since the framework hasn't been updated since 2010
-          </p>
-          <p>
-            5.Start to create a tutorial for how to set up Tekkotsu.
-            <br>
-            Dr. Jim recommended this because it allows me to document what I have done in detail.
-            Also since the framework hasn't been updated for ten years, a tutorial will help people set up the framework with ease in the future.
-          </p>
-        </div>
-        <div class="card">
-          <h2>Bi-Weekly Update</h2>
-          <h5>Oct 12, 2019</h5>
-          <p>
-            1. Looked into the old AIBO Programming Framework "Tekkotsu" at http://www.tekkotsu.org/ArchitecturalOverview.html
-            <br>
-            Familiarized myself with its high-level architecture, user interface, and syntax.
-          </p>
-          <p>
-            2. Master student Rahatul Amin who work with me on this project sent an inquiry about the API release to Sony Japan.
-            <br>
-            Sony responded that its open API is scheduled to be released in November 2019.
-            <br>
-          </p>
-          <p>
-            3. Found out that the existing tool My Aibo app could potentially give us some control over Aibo.
-            <br>
-            Asked for the particular account associated with the robot in order to log in. Explored what we can do with the app.
-            Functions like viewing photo taken by Aibo and patroling could be relevant to our study.
-          </p>
-          <p>
-            4. Start to set up the programming environment for running Tekkotsu
-            <br>
-            Installed Ubuntu 14.04 LTS following the instructions at http://wiki.tekkotsu.org/index.php/Install_instructions
-            <br>
-            Found out my computer doesn't have enough space for installing an operating system alongside Windows 10.
-            (After I installed it, there's only 600 MB allocated for the system.) I told Dr. Young about it and he has asked Jeff Durston if we could get a computer from school.
-            <br>
-            Troubleshot network connection issue and solved it by blacklisting acer_wmi
-          </p>
-        </div>
-        <hr>
-        <div class="card">
-          <h2>Weekly Update</h2>
-          <h5>Sep 25, 2019</h5>
-          <p>
-            1. Went through AIBO Programming Tutorial at http://aibostuff.iofreak.com/wiki.php?n=Aibo.Development
-            <br>
-            Familiarized myself with R-CODE syntax and some sample programs.
-          </p>
-          <p>
-            2. Found out that Sony postponed its open API release to Fall 2019 according to https://prtimes.jp/main/html/rd/p/000000044.000024857.html
-            <br>
-            Dr. Jim Young is reaching out to his connections to find out when exactly the open API will be released.
-          </p>
-          <p>
-            3. Was recommended by Dr. JIm Young to look into a programming framework called "Tekkotsu".
-            <br>
-            Started to look into its manual at http://www.tekkotsu.org/about.html
-          </p>
-          <p>
-            4. Found that the pink memory stick is on sale at https://www.ebay.ca/itm/Rare-SONY-16MB-Memory-Stick-AIBO-ERA-MS016-NEW-SEALED/383107582403?hash=item5932fdc9c3:g:-nUAAOSwjW5dV4-x
-            <br>
-            The pink memory stick is required for programming the old Aibo. Already messaged Dr. Young about it.
-          </p>
-        </div>
-        <hr>
-        <div class="card">
-          <h2>Weekly Update</h2>
-          <h5>Sep 17, 2019</h5>
-          <p>
-            1. Found out that Sony was supposed to release its open API for the latest Aibo ERS-1000 in August according to https://spectrum.ieee.org/automaton/robotics/home-robots/sony-upgrading-aibo-with-new-home-security-features-api-access
-            <br>
-            But there isn't any API released by Sony as of Sep 17, 2019, so Dr. Young suggested to program the old Aibo ERS-7 first.
-            <br>
-            I also sent an email to Sony regarding when the API will come out, and haven't got a response yet.
-          </p>
-          <p>
-            2. Went through AIBO Programming Tutorial at https://www.cc.gatech.edu/~tucker/courses/amrs/aibo/AIBOProgrammingTutorial.pdf
-            <br>
-            Learned about OPENR objects and their communication mechanism
-          </p>
-          <p>
-            3. Read the general overview of the Aibo software development environment on Aibo wikipedia page at https://en.wikipedia.org/wiki/AIBO#Software
-            <br>
-            Found out that the three main ways of programming Aibo are: OPEN-R SDK, R-CODE, and AIBO remote framework.
-          </p>
-          <p>
-            4. Compared different software development environments from http://aibostuff.iofreak.com/wiki.php?n=Aibo.Development
-            <br>
-            Started look into R-CODE syntax since it is high-level and easy to grasp.
-          </p>
-        </div>
-        <hr>
-        <div class="card">
-          <h2>Project Proposal</h2>
-          <h5>September 14, 2019</h5>
-          <p>
-            <h4>
-              <center>
-                COMP 4520 – Undergraduate Honours Project Proposal
-                <br>
-                Aibo’s behaviours to convey its states and intentions
-                <br>
-                Zhikan Xu
-                <br>
-                Supervisor: James E. Young
-              </center>
-            </h4>
-            <h4>I. Abstract:</h4>
-            Robots come in all shapes and sizes. Some scientists draw their inspiration from animals. Unlike
-            their humanoid counterparts, animal-inspired robots are not expected to speak human languages,
-            so how they communicate with humans becomes a challenge. This project looks into a robot dog
-            Aibo. By examining how humans perceive and react to its certain movements, we could find out
-            the most effective behaviours to convey its states and intentions.
-            <h4>II. Introduction to the topic:</h4>
-            There are still lots of unknowns when it comes to the most effective, universal behaviours for an
-            animal robot to communicate with humans. Many motions could be interpreted differently
-            depending on a user’s cultural background. Various research papers from the HCI lab at
-            University of Manitoba have looked into this issue.
-            <h4>III. Your background preparation to do this project:</h4>
-            I completed HCI I, II, and Graphic I, which give me a solid understanding of how humans
-            perceive and interact with computing technology.
-            My previous summer research term immersed me in a research environment and equipped me
-            with better problem-solving skills.
-            <h4>IV. Related work:</h4>
-            A Dog Tail Interface for Communicating Affective States of Utility Robots by Ashish Singh.
-            Adapting the Laban Effort System to Design Affect-Communicating Locomotion Path for a
-            Flying Robot by Megha Sharma.
-            <h4>V. Problem Statement:</h4>
-            Evaluate the feasibility of running formal experiments on what
-            behaviours are the most effective in communicating an Aibo’s intentions and states to its user.
-            <h4>VI. Methodology:</h4>
-            Timeboxing helps break down the schedule into timeboxes with each timebox having its own deliverables.
-            <table>
-              <tr>
-                <th>Deadline</th>
-                <th>Deliverables</th>
-              </tr>
-              <tr>
-                <td>Early Nov</td>
-                <td>Custom behaviours programmed on Aibo</td>
-              </tr>
-              <tr>
-                <td>Late Nov</td>
-                <td>Design of pilot experiments</td>
-              </tr>
-              <tr>
-                <td>Mid Dec</td>
-                <td>Data collected from pilot experiments</td>
-              </tr>
-            </table>
-            <h4>
-              VII. Infrastructure and facilities and expert personnel required:
-              An Aibo robot dog with an open API that allows a programmer to access Aibo’s hardware
-            </h4>
-            features.
-            <h4>VIII. Outcome and Deliverables:</h4>
-            I expect to have a set of custom behaviours programmed on an Aibo and conduct pilot
-            experiments on finding the most effective Aibo behaviours to convey its intentions and states.
-            <h4>References:</h4>
-            Sharma, M. (2013). Affective Flying-Robot Motions via the Laban Effort System. Retrieved from HCI Lab
-            University of Manitoba: http://hci.cs.umanitoba.ca/projects-and-research/details/adapting-thelaban-effort-system-to-design-affect-communicating-locomotion
-            <br>
-            Singh, A. (2013). A Dog Tail for Robots (2013). Retrieved from HCI Lab University of Manitoba:
-            http://hci.cs.umanitoba.ca/projects-and-research/details/exploring-animal-inspired-humanrobot-interaction
-          </p>
-        </div>
+  <div class="header">
+    <h2>Zhikan's Undergraduate Honours Project Blog</h2>
+  </div>
+  <div class="row">
+    <div>
+      <div class="card">
+        <h2>Bi-Weekly Update</h2>
+        <h5>Nov 20, 2019</h5>
+        <p>
+          1. Archive the the Tekkotsu website at http://www.tekkotsu.org/index.html and http://wiki.tekkotsu.org/index.php/Main_Page
+          <br>
+          Since the Tekkotsu page is shutting down, I felt like it should be archived for future developers. I did it with Wayback Machine following the instructions at https://www.stillio.com/how-to-archive-website
+        </p>
+      </div>
+      <hr>
+      <div class="card">
+        <h2>Bi-Weekly Update</h2>
+        <h5>Nov 6, 2019</h5>
+        <p>
+          1. Compile Tekkotsu behaviour program
+          <br>
+          After installing Tekkotsu's dependencies. I started to build a simple program following the instructions on http://www.tekkotsu.org/execution.html
+          <br>
+          I encoutered an error saying "cc1plus: error: unrecognized command line option '-std=c++11'",
+          and it turned out that the gcc installed from the tutorial http://www.tekkotsu.org/openr-install.html was too old for the latest version of Tekkotsu.
+          <br>
+          I realized that the two Tekkotsu setup tutorials on the same website are for two different version of Tekkotsu although it was not explicitly mentioned.
+          <br>
+          I downgraded my Tekkotsu version to 4.0.1. And the program was successfully compiled.
+          <br>
+        </p>
+        <p>
+          2. Install Mirage (Mirage is a simulation environment which can host multiple agents in a virtual world.)
+          <br>
+          The OPEN-R SDK I installed comes with GCC 3.3.6. It only works with Tekkotsu 4.0.1 which doesn't include Mirage in its source code.
+          <br>
+          Fortunately, I found a package called AIBO+ that builds a new AI of AIBO from scratch. It comes with OPEN-R SDK with GCC 5.4. It could potentially work with Tekkotsu 5.1 which does include Mirage.
+          <br>
+          When I tried to install, it said "E: Unable to locate package" because the package has been removed for my Ubuntu version.
+          I tried to trace back to the previous package history in https://launchpad.net/~csaba-kertesz/+archive/ubuntu/aiboplus/+packages?field.name_filter=&field.status_filter=superseded&field.series_filter=trusty,
+          but the file has been deleted.
+          <br>
+          Then I tried to extract OPEN_R_SDK directly from the source code of AIBO+ and compile Tekkotusu program, but it was not successful saying 'missing the header file'
+        </p>
+        <p>
+          3. Started to create a image disk of my Ubuntu system
+          <br>
+          Since I have successfully compiled a Tekkotsu behaviour program, Dr. Jim ask me to make a disk image of my Ubuntu system.
+          <br>
+          The reason is that Tekkotsu is offically obsolete since September 2019 and its website Tekkotsu.org is shutting down. A working version of the system could be beneficial to future developers
+        </p>
+      </div>
+      <hr>
+      <div class="card">
+        <h2>Bi-Weekly Update</h2>
+        <h5>Oct 23, 2019</h5>
+        <p>
+          1. Continued look into what the best way is to install Ubuntu 14.04 LTS.
+          <br>
+          I could install Ubuntu on a 16GB flash drive. That gives me enough room for now so that I should be able to continue with my framework setup.
+          <br>
+          I partitioned my flash drive but it still doesn't have enough space.
+          <br>
+          Dr. Jim emailed me back saying he would recommend use a virtual machine.
+          <br>
+          I installed Ubuntu as a VM using VirtualBox.
+        </p>
+        <p>
+          2. Familiarized myself with Linux commands.
+          <br>
+          Learned how to edit text files with vim, how to run programs with the security privileges.
+        </p>
+        <p>
+          3. Start to set up Tekkotsu and its dependencies.
+          <br>
+          Downloaded and installed the latest version of Tekkotsu using CVS (Concurrent Versions System).
+          <br>
+          Installed Open-R SDK as a dependency of Tekkotsu. One of its dependency 'texinfo' was too new. I had to downgrade it.
+        </p>
+        <p>
+          4.Since I don't have a physical robot to run the Tekkotsu program on, I also try to set up Mirage which is a virtual environment for hosting agents and its dependency.
+          <br>
+          Some links to the dependencies of it are invalid since the framework hasn't been updated since 2010
+        </p>
+        <p>
+          5.Start to create a tutorial for how to set up Tekkotsu.
+          <br>
+          Dr. Jim recommended this because it allows me to document what I have done in detail.
+          Also since the framework hasn't been updated for ten years, a tutorial will help people set up the framework with ease in the future.
+        </p>
+      </div>
+      <hr>
+      <div class="card">
+        <h2>Bi-Weekly Update</h2>
+        <h5>Oct 12, 2019</h5>
+        <p>
+          1. Looked into the old AIBO Programming Framework "Tekkotsu" at http://www.tekkotsu.org/ArchitecturalOverview.html
+          <br>
+          Familiarized myself with its high-level architecture, user interface, and syntax.
+        </p>
+        <p>
+          2. Master student Rahatul Amin who work with me on this project sent an inquiry about the API release to Sony Japan.
+          <br>
+          Sony responded that its open API is scheduled to be released in November 2019.
+          <br>
+        </p>
+        <p>
+          3. Found out that the existing tool My Aibo app could potentially give us some control over Aibo.
+          <br>
+          Asked for the particular account associated with the robot in order to log in. Explored what we can do with the app.
+          Functions like viewing photo taken by Aibo and patroling could be relevant to our study.
+        </p>
+        <p>
+          4. Start to set up the programming environment for running Tekkotsu
+          <br>
+          Installed Ubuntu 14.04 LTS following the instructions at http://wiki.tekkotsu.org/index.php/Install_instructions
+          <br>
+          Found out my computer doesn't have enough space for installing an operating system alongside Windows 10.
+          (After I installed it, there's only 600 MB allocated for the system.) I told Dr. Young about it and he has asked Jeff Durston if we could get a computer from school.
+          <br>
+          Troubleshot network connection issue and solved it by blacklisting acer_wmi
+        </p>
+      </div>
+      <hr>
+      <div class="card">
+        <h2>Weekly Update</h2>
+        <h5>Sep 25, 2019</h5>
+        <p>
+          1. Went through AIBO Programming Tutorial at http://aibostuff.iofreak.com/wiki.php?n=Aibo.Development
+          <br>
+          Familiarized myself with R-CODE syntax and some sample programs.
+        </p>
+        <p>
+          2. Found out that Sony postponed its open API release to Fall 2019 according to https://prtimes.jp/main/html/rd/p/000000044.000024857.html
+          <br>
+          Dr. Jim Young is reaching out to his connections to find out when exactly the open API will be released.
+        </p>
+        <p>
+          3. Was recommended by Dr. JIm Young to look into a programming framework called "Tekkotsu".
+          <br>
+          Started to look into its manual at http://www.tekkotsu.org/about.html
+        </p>
+        <p>
+          4. Found that the pink memory stick is on sale at https://www.ebay.ca/itm/Rare-SONY-16MB-Memory-Stick-AIBO-ERA-MS016-NEW-SEALED/383107582403?hash=item5932fdc9c3:g:-nUAAOSwjW5dV4-x
+          <br>
+          The pink memory stick is required for programming the old Aibo. Already messaged Dr. Young about it.
+        </p>
+      </div>
+      <hr>
+      <div class="card">
+        <h2>Weekly Update</h2>
+        <h5>Sep 17, 2019</h5>
+        <p>
+          1. Found out that Sony was supposed to release its open API for the latest Aibo ERS-1000 in August according to https://spectrum.ieee.org/automaton/robotics/home-robots/sony-upgrading-aibo-with-new-home-security-features-api-access
+          <br>
+          But there isn't any API released by Sony as of Sep 17, 2019, so Dr. Young suggested to program the old Aibo ERS-7 first.
+          <br>
+          I also sent an email to Sony regarding when the API will come out, and haven't got a response yet.
+        </p>
+        <p>
+          2. Went through AIBO Programming Tutorial at https://www.cc.gatech.edu/~tucker/courses/amrs/aibo/AIBOProgrammingTutorial.pdf
+          <br>
+          Learned about OPENR objects and their communication mechanism
+        </p>
+        <p>
+          3. Read the general overview of the Aibo software development environment on Aibo wikipedia page at https://en.wikipedia.org/wiki/AIBO#Software
+          <br>
+          Found out that the three main ways of programming Aibo are: OPEN-R SDK, R-CODE, and AIBO remote framework.
+        </p>
+        <p>
+          4. Compared different software development environments from http://aibostuff.iofreak.com/wiki.php?n=Aibo.Development
+          <br>
+          Started look into R-CODE syntax since it is high-level and easy to grasp.
+        </p>
+      </div>
+      <hr>
+      <div class="card">
+        <h2>Updated Project Proposal</h2>
+        <h5>November 9, 2019</h5>
+        <p>
+          <h4>
+            <center>
+              COMP 4520 – Undergraduate Honours Project Proposal
+              <br>
+              Program
+              <br>
+              Zhikan Xu
+              <br>
+              Supervisor: James E. Young
+            </center>
+          </h4>
+          <h4>I. Abstract:</h4>
+          Tekkotsu is an application development framework for mobile robots such as AIBO. It's relatively high-level and requires a shallower learning curve when compared to many low-level frameworks.
+          Althought being a easy-to-use tool for many developers to program a robot, it hasn't been maintained or updated since 2010. The project is to produce a tutorial for installing Tekkotusu framework along with its dependency.
+          <h4>II. Introduction to the topic:</h4>
+          Tekkotsu was originally developed for the Sony AIBO robot dog, but now supports many other platforms including Chiara, iRobot Create, HandEye, and Lynxmotion. Many of its dependenciy have , which makes
+          In September
+          <h4>III. Your background preparation to do this project:</h4>
+          I completed Software Engineering I, II, and three co-op work terms, which give me decent experience of building software and troubleshoot .
+          My previous summer research term immersed me in a research environment and equipped me
+          with better problem-solving skills.
+          <h4>IV. Related work:</h4>
+          A Dog Tail Interface for Communicating Affective States of Utility Robots by Ashish Singh.
+          Adapting the Laban Effort System to Design Affect-Communicating Locomotion Path for a
+          Flying Robot by Megha Sharma.
+          <h4>V. Problem Statement:</h4>
+          Evaluate the feasibility of running formal experiments on what
+          behaviours are the most effective in communicating an Aibo’s intentions and states to its user.
+          <h4>VI. Methodology:</h4>
+          Timeboxing helps break down the schedule into timeboxes with each timebox having its own deliverables.
+          <table>
+            <tr>
+              <th>Deadline</th>
+              <th>Deliverables</th>
+            </tr>
+            <tr>
+              <td>Early Nov</td>
+              <td>Custom behaviours programmed on Aibo</td>
+            </tr>
+            <tr>
+              <td>Late Nov</td>
+              <td>Design of pilot experiments</td>
+            </tr>
+            <tr>
+              <td>Mid Dec</td>
+              <td>Data collected from pilot experiments</td>
+            </tr>
+          </table>
+          <h4>
+            VII. Infrastructure and facilities and expert personnel required:
+            An Aibo robot dog with an open API that allows a programmer to access Aibo’s hardware
+          </h4>
+          features.
+          <h4>VIII. Outcome and Deliverables:</h4>
+          I expect to have a set of custom behaviours programmed on an Aibo and conduct pilot
+          experiments on finding the most effective Aibo behaviours to convey its intentions and states.
+          <h4>References:</h4>
+          Sharma, M. (2013). Affective Flying-Robot Motions via the Laban Effort System. Retrieved from HCI Lab
+          University of Manitoba: http://hci.cs.umanitoba.ca/projects-and-research/details/adapting-thelaban-effort-system-to-design-affect-communicating-locomotion
+          <br>
+          Singh, A. (2013). A Dog Tail for Robots (2013). Retrieved from HCI Lab University of Manitoba:
+          http://hci.cs.umanitoba.ca/projects-and-research/details/exploring-animal-inspired-humanrobot-interaction
+        </p>
+      </div>
+      <hr>
+      <div class="card">
+        <h2>Project Proposal</h2>
+        <h5>September 14, 2019</h5>
+        <p>
+          <h4>
+            <center>
+              COMP 4520 – Undergraduate Honours Project Proposal
+              <br>
+              Program
+              <br>
+              Zhikan Xu
+              <br>
+              Supervisor: James E. Young
+            </center>
+          </h4>
+          <h4>I. Abstract:</h4>
+          Robots come in all shapes and sizes. Some scientists draw their inspiration from animals. Unlike
+          their humanoid counterparts, animal-inspired robots are not expected to speak human languages,
+          so how they communicate with humans becomes a challenge. This project looks into a robot dog
+          Aibo. By examining how humans perceive and react to its certain movements, we could find out
+          the most effective behaviours to convey its states and intentions.
+          <h4>II. Introduction to the topic:</h4>
+          There are still lots of unknowns when it comes to the most effective, universal behaviours for an
+          animal robot to communicate with humans. Many motions could be interpreted differently
+          depending on a user’s cultural background. Various research papers from the HCI lab at
+          University of Manitoba have looked into this issue.
+          <h4>III. Your background preparation to do this project:</h4>
+          I completed HCI I, II, and Graphic I, which give me a solid understanding of how humans
+          perceive and interact with computing technology.
+          My previous summer research term immersed me in a research environment and equipped me
+          with better problem-solving skills.
+          <h4>IV. Related work:</h4>
+          A Dog Tail Interface for Communicating Affective States of Utility Robots by Ashish Singh.
+          Adapting the Laban Effort System to Design Affect-Communicating Locomotion Path for a
+          Flying Robot by Megha Sharma.
+          <h4>V. Problem Statement:</h4>
+          Evaluate the feasibility of running formal experiments on what
+          behaviours are the most effective in communicating an Aibo’s intentions and states to its user.
+          <h4>VI. Methodology:</h4>
+          Timeboxing helps break down the schedule into timeboxes with each timebox having its own deliverables.
+          <table>
+            <tr>
+              <th>Deadline</th>
+              <th>Deliverables</th>
+            </tr>
+            <tr>
+              <td>Early Nov</td>
+              <td>Custom behaviours programmed on Aibo</td>
+            </tr>
+            <tr>
+              <td>Late Nov</td>
+              <td>Design of pilot experiments</td>
+            </tr>
+            <tr>
+              <td>Mid Dec</td>
+              <td>Data collected from pilot experiments</td>
+            </tr>
+          </table>
+          <h4>
+            VII. Infrastructure and facilities and expert personnel required:
+            An Aibo robot dog with an open API that allows a programmer to access Aibo’s hardware
+          </h4>
+          features.
+          <h4>VIII. Outcome and Deliverables:</h4>
+          I expect to have a set of custom behaviours programmed on an Aibo and conduct pilot
+          experiments on finding the most effective Aibo behaviours to convey its intentions and states.
+          <h4>References:</h4>
+          Sharma, M. (2013). Affective Flying-Robot Motions via the Laban Effort System. Retrieved from HCI Lab
+          University of Manitoba: http://hci.cs.umanitoba.ca/projects-and-research/details/adapting-thelaban-effort-system-to-design-affect-communicating-locomotion
+          <br>
+          Singh, A. (2013). A Dog Tail for Robots (2013). Retrieved from HCI Lab University of Manitoba:
+          http://hci.cs.umanitoba.ca/projects-and-research/details/exploring-animal-inspired-humanrobot-interaction
+        </p>
       </div>
     </div>
+  </div>
 </body>
