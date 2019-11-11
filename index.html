@@ -22,6 +22,23 @@
           <br>
           Since the Tekkotsu page is shutting down, I felt like it should be archived for future developers. I did it with Wayback Machine following the instructions at https://www.stillio.com/how-to-archive-website
         </p>
+        <p>
+          2. Created a shared folder between the host OS Windows 10 and guest OS Ubuntu 14.04 LTS
+          <br>
+          Followed the instructions at https://www.slothparadise.com/create-shared-folder-virtualbox/ to create a shared folder.
+          <br>
+          Found out the step 2 to 4 can be eliminated by simply installing the Guest Additions with Ubuntu's Advanced Packaging Tool (APT)
+        </p>
+        <p>
+          3. Started to create a disk image of my Ubuntu system
+          <br>
+          Familiarized myself with Ubuntu boot partitions and where they are located.
+          <br>
+          Used command-line utility dd to copy the system into a disk image.
+        </p>
+        <p>
+          4. Filled in more content for my tutorial at https://1drv.ms/w/s!Ai2ZTQNOIHLxgelCdKJWL1flp0ORng?e=anKYna
+        </p>
       </div>
       <hr>
       <div class="card">
@@ -54,7 +71,7 @@
           Then I tried to extract OPEN_R_SDK directly from the source code of AIBO+ and compile Tekkotusu program, but it was not successful saying 'missing the header file'
         </p>
         <p>
-          3. Started to create a image disk of my Ubuntu system
+          3. Started to create a disk image of my Ubuntu system
           <br>
           Since I have successfully compiled a Tekkotsu behaviour program, Dr. Jim ask me to make a disk image of my Ubuntu system.
           <br>
@@ -202,12 +219,12 @@
           </h4>
           <h4>I. Abstract:</h4>
           Tekkotsu is an application development framework for mobile robots such as AIBO. It's relatively high-level and requires a shallower learning curve when compared to many low-level frameworks.
-          Althought being a easy-to-use tool for many developers to program robots, it hasn't been maintained or updated since 2010. 
-          The goal is to produce a tutorial on how to install Tekkotusu framework along with its dependency.
-          It also creates a disk image of the system with the framework and its dependencies in place for those who want avoid the hassle of installing on their own.
+          Althought being a easy-to-use tool for many developers to program robots, it hasn't been maintained or updated since 2010.
+          The goal is to produce a tutorial on how to install Tekkotusu framework along with its dependency as well as to create a disk image of the operating system with the framework and its dependencies in place for those who want avoid the hassle of installing on their own.
           <h4>II. Introduction to the topic:</h4>
-          Tekkotsu was originally developed for the Sony AIBO robot dog, but now supports many other platforms including Chiara, iRobot Create, HandEye, and Lynxmotion. Many of its dependenciy have , which makes
-          In September
+          Tekkotsu was originally developed for the Sony AIBO robot dog, but now supports many other platforms including Chiara, iRobot Create, HandEye, and Lynxmotion.
+          The framework is offically obsolete since September 2019 and its website Tekkotsu.org is shutting down. The links to download many of its dependenciy have expired, which makes the installation even more challenging.
+          A working version of the system could be beneficial to future developers.
           <h4>III. Your background preparation to do this project:</h4>
           I completed Software Engineering I, II, and three co-op work terms, which give me decent experience of building software and troubleshoot .
           My previous summer research term immersed me in a research environment and equipped me
